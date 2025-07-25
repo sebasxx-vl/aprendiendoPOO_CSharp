@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
 
 /*¿Qué es la abstracción?
@@ -25,7 +26,7 @@ public class NombreClase
     }
 }
 
-*ESTRUCTURA ABSTRACCION EN EL PROGRAM:
+ *ESTRUCTURA ABSTRACCION EN EL PROGRAM:
 class Program
 {
     static void Main(string[] args)
@@ -44,9 +45,7 @@ class Program
         Console.ReadLine();
     }
 }
-*/
-
-/*¿Qué es el encapsulamiento?
+-------------------------¿Qué es el encapsulamiento?
 *Es el principio de proteger los datos de una clase haciendo sus atributos private y controlando su acceso a través de 
    métodos públicos (getters/setters o métodos de acción).
 
@@ -91,10 +90,7 @@ class Program
         Console.ReadLine();
     }
 }
-*/
-
-/*
- ¿QUÉ ES LA HERENCIA?
+-------------------¿QUÉ ES LA HERENCIA?
 Herencia es un mecanismo que permite crear una clase nueva (hija) a partir de una clase existente (padre), heredando sus atributos y métodos.
 
 ESTRUCTURA HERENCIA
@@ -163,8 +159,7 @@ class Program
         Console.ReadLine();           // Pausar consola
     }
 }
- */
-/*¿QUÉ ES EL POLIMORFISMO?
+-----------¿QUÉ ES EL POLIMORFISMO?
 Polimorfismo significa “muchas formas”.
 En programación, permite que una misma acción (método) se comporte de diferentes maneras dependiendo del objeto que la utilice.
 
@@ -251,10 +246,8 @@ class Program
 
 
 */
-class Program
-{
+//EJERCICIOS POLIMORFISMO   
 
-}
 /*EJERCIO ESTACIONES
 {
     static void Main(string[] args)
@@ -271,8 +264,7 @@ class Program
         }
     }
 }
-*/
-/*EJERCICIO PLANETA
+EJERCICIO PLANETA
 {
     static void Main(string[] args)
     {
@@ -288,59 +280,57 @@ class Program
         }
     }
 }
-*/
- /* EJERCICIO MAS DIFICIL, SISTEMJUEGOS.CS
-                                        class Program
-                                        {
-                                            static void Main(string[] args)
-                                            {
-                                                List<JuegoMesa> partidas = new List<JuegoMesa>();
+EJERCICIO MAS DIFICIL, SISTEMJUEGOS.CS
+                                       class Program
+                                       {
+                                           static void Main(string[] args)
+                                           {
+                                               List<JuegoMesa> partidas = new List<JuegoMesa>();
 
-                                                Console.WriteLine("¿Cuantas partidas quieres registrar?");
-                                                int cantidad = int.Parse(Console.ReadLine());
+                                               Console.WriteLine("¿Cuantas partidas quieres registrar?");
+                                               int cantidad = int.Parse(Console.ReadLine());
 
-                                                for (int i = 0; i < cantidad; i++)
-                                                {
-                                                    Console.WriteLine($"\nPartida #{i + 1}");
-                                                    Console.Write("Tipo de juego(ajedrez / uno / pictionary): ");
-                                                    string tipo = Console.ReadLine().ToLower();
+                                               for (int i = 0; i < cantidad; i++)
+                                               {
+                                                   Console.WriteLine($"\nPartida #{i + 1}");
+                                                   Console.Write("Tipo de juego(ajedrez / uno / pictionary): ");
+                                                   string tipo = Console.ReadLine().ToLower();
 
-                                                    Console.Write("Nombre de la partida: ");
-                                                    string nombre = Console.ReadLine();
+                                                   Console.Write("Nombre de la partida: ");
+                                                   string nombre = Console.ReadLine();
 
-                                                    Console.Write("Número de jugadores: ");
-                                                    int jugadores = int.Parse(Console.ReadLine());
+                                                   Console.Write("Número de jugadores: ");
+                                                   int jugadores = int.Parse(Console.ReadLine());
 
-                                                    if (tipo == "ajedrez")
-                                                    {
-                                                        partidas.Add(new Ajedrez(nombre, jugadores));
-                                                    }
-                                                    else if (tipo == "uno")
-                                                    {
-                                                        partidas.Add(new Uno(nombre, jugadores));
-                                                    }
-                                                    else if (tipo == "pictionary")
-                                                    {
-                                                        partidas.Add(new Pictionary(nombre, jugadores));
-                                                    }
-                                                    else
-                                                        Console.WriteLine("Tipo de juego no valido. Se omite esta partida");
-                                                }
+                                                   if (tipo == "ajedrez")
+                                                   {
+                                                       partidas.Add(new Ajedrez(nombre, jugadores));
+                                                   }
+                                                   else if (tipo == "uno")
+                                                   {
+                                                       partidas.Add(new Uno(nombre, jugadores));
+                                                   }
+                                                   else if (tipo == "pictionary")
+                                                   {
+                                                       partidas.Add(new Pictionary(nombre, jugadores));
+                                                   }
+                                                   else
+                                                       Console.WriteLine("Tipo de juego no valido. Se omite esta partida");
+                                               }
 
-                                                Console.WriteLine("\n Lista de partidas registradas:\n");
+                                               Console.WriteLine("\n Lista de partidas registradas:\n");
 
-                                                foreach(JuegoMesa juego in partidas)
-                                                {
-                                                    juego.MostrarInfo();
-                                                    juego.Instrucciones();
-                                                    Console.WriteLine("---------------------");
-                                                }
+                                               foreach(JuegoMesa juego in partidas)
+                                               {
+                                                   juego.MostrarInfo();
+                                                   juego.Instrucciones();
+                                                   Console.WriteLine("---------------------");
+                                               }
 
-                                                Console.ReadLine();
-                                            }
-                                        }
- */
-/*
+                                               Console.ReadLine();
+                                           }
+                                       }
+EJERCICIO TRABAJADOR
 {
     static void Main(string[] args)
     {
@@ -352,12 +342,15 @@ class Program
     }
 }
 */
-/*EJERCICIO TRES PILARES
+
+//TRES PILARES
+
+/*EJERCICIO GESTION PRODUCTOS
                             class Program
                             {
 
                             }
-                            /*
+                      /*
                             {
                                 static void Main(string[] args)
                                 {
@@ -366,8 +359,8 @@ class Program
                                     aduana.Aduanas();
                                 }
                             }
-                            */
-/* EJERCICIO DIFICIL TRESPILARES/USUARIO.CS
+
+EJERCICIO DIFICIL TRESPILARES/USUARIO.CS
 {
     static void Main(string[] args)
     {
@@ -376,8 +369,8 @@ class Program
         hotel.Reserva();
     }
 }
-*/
-/*
+
+EJERCICIO PLATAFORMA
 {
     static void Main(string[] args)
     {
@@ -386,8 +379,7 @@ class Program
         stream.reproducir();
     }
 }
-*/
-/* EJERCICIO ARCHIVO
+EJERCICIO ARCHIVO
 {
     static void Main(string[] args)
     {
@@ -396,8 +388,7 @@ class Program
         pdf.Buscar();
     }
 }
-*/
-/*EJERCICIO DOCTOR
+EJERCICIO DOCTOR
 {
     static void Main(string[] args)
     {
@@ -407,8 +398,7 @@ class Program
     }
 
 }
-*/
-/* EJERCICIO SMARTWATCH
+EJERCICIO SMARTWATCH
 {
     static void Main(string[] args)
     {
@@ -417,8 +407,7 @@ class Program
         reloj.Pasos();
     }
 }
-*/
-/*EJERCICIO JUEGO.CS
+EJERCICIO JUEGO.CS
 {
     static void Main(string[] args)
     {
@@ -427,8 +416,7 @@ class Program
         poker.Poker();
     }
 }
-*/
-/*EJERCICIO PULPO
+EJERCICIO PULPO
 {
     static void Main(string[] args)
     {
@@ -437,8 +425,7 @@ class Program
         pulpo.Camuflarse();
     }
 }
-*/
-/* EJERCICIO MEDIOTRANSPORTE
+ EJERCICIO MEDIOTRANSPORTE
 {
     static void Main(string[] args)
     {
@@ -449,12 +436,76 @@ class Program
 }
 */
 
-/*EJERCICIOS HERENCIA
-                        class Program
-                        {
+/*EJERCICIOS HERENCIA*/
+/*
+class Program
+{
+EJERCICIO CONTAR DIGITOS
+    static void Main(string[] args)
+    {
+        Digitos dig = new Digitos(250823);
+        Console.WriteLine($"Cantidad de digitos: {dig.Contar()}");
+    }
+}
+EJERCICIO CONTARVOCALES
+{
+    static void Main(string[] args)
+    {
+        Vocales vocales = new Vocales("Hola, esto es CIIIIIISHARPPP");
+        Console.WriteLine($"Frase original: {vocales.ObtenerFrase()}");
+        Console.WriteLine($"Cantidad de vocales: {vocales.Contar()}");
+    }
+}
 
-                        }
-                        /* EJERCICIO DISPOSITIVE.CS
+ * EJERCICIO MULTIPLOS
+{
+    static void Main(string[] args)
+    {
+        Multiplo multi = new Multiplo(20);
+        Console.WriteLine($"Número: {multi.ObtenerNumero()}");
+        Console.WriteLine(multi.Revisar());
+    }
+}
+EJERCICIOPUNTUACION
+{ 
+    static void Main(string[] args)
+    {
+        EvaluateScore evaluar = new EvaluateScore(27);
+        Console.WriteLine($"Puntaje: {evaluar.Points()}");
+        Console.WriteLine(evaluar.range());
+    }
+}
+EJERCICIO VALIDAR CONTRASEÑA
+{
+    static void Main(string[] args)
+    {
+        ClaveSegura validar = new ClaveSegura("1033489199Sebas");
+        Console.WriteLine(validar.ObtenerClave());
+        Console.WriteLine(validar.validarClave());
+
+    }
+}
+EJERCICIO TERMOMETRO
+{
+    static void Main(string[] args)
+    {
+        Temperatura temp = new Temperatura(38.8);
+        Console.WriteLine(temp.TemperaturaActual());
+        Console.WriteLine(temp.rango());
+    }
+}
+EJERCICIO RECETA
+{
+    static void Main(string[] args)
+    {
+        RecetaVegetariana vegetariana = new RecetaVegetariana("Ensalada Cesar", 25, "Lechuga");
+        Console.WriteLine(vegetariana.ObtenerResumen());
+        Console.WriteLine(vegetariana.ObtenerIngredientes());
+
+    }
+}
+
+EJERCICIO DISPOSITIVE.CS
                         {
                             static void Main(string[] args)
                             {
@@ -463,8 +514,8 @@ class Program
                                 tablet.VerVideo();
                             }
                         }
-                        */
-            /*EJERCICIO ANIMAL MARINO
+
+      EJERCICIO ANIMAL MARINO
             {
                 static void Main(string[] args)
                 {
@@ -473,8 +524,7 @@ class Program
                     delfin.HacerSonido();
                 }
             }
-            */
-            /* EJERCICIO VIDEOGAME
+           EJERCICIO VIDEOGAME
             {
                 static void Main(string[] args)
                 {
@@ -483,8 +533,7 @@ class Program
                     videoGame.SaveGame();
                 }
             }
-            */
-            /* EJERCICIO BICYCLE
+            EJERCICIO BICYCLE
             {
                 static void Main(string[] args)
                 {
@@ -495,8 +544,7 @@ class Program
                 }
 
             }
-            */
-            /* EJERCICIO CUENTA BANCO
+            EJERCICIO CUENTA BANCO
             {
                 static void Main(string[] args)
                 {
@@ -507,8 +555,7 @@ class Program
                     Console.ReadLine();
                 }
             }
-            */
-            /* EJERCICIO INSTRUMENTO
+            EJERCICIO INSTRUMENTO
             {
                 static void Main(string[] args)
                 {
@@ -518,9 +565,7 @@ class Program
                     Console.ReadLine();
                 }
             }
-            */
-
-            /* EJERCICIO LIBRO/COMIC
+            EJERCICIO LIBRO/COMIC
             {
                 static void Main(string[] args)
                 {
@@ -530,8 +575,7 @@ class Program
                     Console.ReadLine();
                 }
             }
-            */
-            /* EJERCICIO PROGRAMADOR
+            EJERCICIO PROGRAMADOR
             {
                 static void Main(string[] args)
                 {
@@ -541,8 +585,7 @@ class Program
                     Console.ReadLine();
                 }
             }
-            */
-            /* EJERCICIO DISPOSITIVO
+             EJERCICIO DISPOSITIVO
             {
                 static void Main(string[] args)
                 {
@@ -552,8 +595,7 @@ class Program
                     Console.ReadLine();
                 }
             }
-            */
-            /* EJERCICIO ELECTRODOMESTICOS
+            EJERCICIO ELECTRODOMESTICOS
             {
                 static void Main(string[] args)
                 {
@@ -566,6 +608,8 @@ class Program
                 }
             }
             */
+
+
 
 //EJERCICIOS NIVEL 2
 
@@ -580,8 +624,8 @@ class Program
         Telar proceso = new Telar(6);
         proceso.EjecutarProceso();
     }
-}*/
-/* EJERCICIO NOTAS MUSICALES
+}
+EJERCICIO NOTAS MUSICALES
 {
     static void Main(string[] args)
     {
@@ -596,9 +640,7 @@ class Program
         }
     }
 }
-*/
-
-/* EJERCICIO TAREA
+EJERCICIO TAREA
 {
     static void Main(string[] args)
     {
@@ -615,8 +657,7 @@ class Program
 
     }
 }
-*/
-/* EJERCICIO IVA
+ EJERCICIO IVA
 {
     static void Main(string[] args)
     {
@@ -629,10 +670,8 @@ class Program
             i.MostrarPrecioIva();
         }
     }
-}*/
-
-
-/* EJERCICIO PERSON
+}
+EJERCICIO PERSON
 {
     static void Main(string[] args)
     {
@@ -648,10 +687,7 @@ class Program
         }
     }
 }
-*/
-
-
-/* EJERCICIO CURSOS
+EJERCICIO CURSOS
 {
     static void Main(string[] args)
     {
@@ -665,10 +701,7 @@ class Program
         }
     }
 }
-*/
-
-
-/* EJERCICIO VEHICULO
+EJERCICIO VEHICULO
 {
     static void Main(string[] args)
     {
@@ -683,10 +716,7 @@ class Program
         }
     }
 }
-*/
-
-
-/* EJERCICIO EMPLEADO
+EJERCICIO EMPLEADO
 {
     static void Main(string[] args)
     {
@@ -701,10 +731,7 @@ class Program
         }
     }
 }
-*/
-
-
-/* EJERCICIO PRODUCTO
+EJERCICIO PRODUCTO
 {
     static void Main(string[] args)
     {
@@ -719,9 +746,7 @@ class Program
         }
     }
 }
-*/
-
-/* EJERCICIO ESTUDIANTE
+ EJERCICIO ESTUDIANTE
 {
     static void Main(string[] args)
     {
@@ -749,10 +774,7 @@ class Program
         Console.ReadLine(); // Pausa al final
     }
 }
-    */
-
-
-/*EJERCICIO PERSONA
+EJERCICIO PERSONA
 {
     static void Main(string[] args)
     {
@@ -771,8 +793,7 @@ class Program
 */
 
 //EJERCICIOS NIVEL 1
-
-/* EJERCICIO RESTAURANTE
+/*EJERCICIO RESTAURANTE
 {
     static void Main(string[] args)
     {
@@ -783,8 +804,8 @@ class Program
 
         restaurante.Info();
     }
-}*/
-/* PELICULA
+}
+PELICULA
 {
     static void Main(string[] args)
     {
@@ -796,8 +817,7 @@ class Program
         pelicula.MostrarPelicula();
     }
 }
-*/
-/* EJERCICIO PERSONA
+EJERCICIO PERSONA
 { 
     static void Main(string[] args)
     {
@@ -809,8 +829,7 @@ class Program
         pipol1.Presentarse();
     }
 }
-*/
-/* EJERCICIO CELULAR
+ EJERCICIO CELULAR
 {
     static void Main(string[] args)
     {
@@ -821,8 +840,7 @@ class Program
         celular1.Llamar();
     }
 }
-*/
-/* EJERCICIO CANCION
+ EJERCICIO CANCION
 {
     static void Main(string[] args)
     {
@@ -838,8 +856,7 @@ class Program
         cancion2.Reproducir();
     }
 }
-*/
-/*EJERCICIO MASCOTA
+*EJERCICIO MASCOTA
 {
     static void Main(string[] args)
     {
@@ -854,8 +871,8 @@ class Program
         mascota1.Presentarse();
         mascota2.Presentarse();
     }
-}*/
-/* EJERCICIO CARRO
+}
+EJERCICIO CARRO
 {
    static void Main(string[] args)
     {
@@ -871,9 +888,120 @@ class Program
         carro2.Arrancar();
     }
 }
+EJERCICIO LIBRO
+{ 
+    static void Main(string[] args)
+    {
+        Libro libro = new Libro();
+        libro.Titulo = "Deshojando Margaritas";
+        libro.Autor = "Walter Riso";
+        libro.yearPublic = 2017;
+
+        libro.InfoLibro();
+    }
+^}
 */
 
-/*EJERCICIO LIBRO
+
+
+
+//EJERCICIOS NIVEL 1
+/*EJERCICIO RESTAURANTE
+{
+    static void Main(string[] args)
+    {
+        Restaurante restaurante = new Restaurante();
+        restaurante.nombre = "Mistica Sanuaire du Fego";
+        restaurante.tipoComida = "Europea";
+        restaurante.ciudad = "El Peñol";
+
+        restaurante.Info();
+    }
+}
+PELICULA
+{
+    static void Main(string[] args)
+    {
+        Pelicula pelicula = new Pelicula();
+        pelicula.titulo = "Las grandes aventuras de Diomedes en Medellin";
+        pelicula.genero = "Violencia, Aventura, Drogras y Sexo";
+        pelicula.duracion = 169;
+
+        pelicula.MostrarPelicula();
+    }
+}
+EJERCICIO PERSONA
+{ 
+    static void Main(string[] args)
+    {
+        People pipol1 = new People();
+        pipol1.nombre = "Juan Andres";
+        pipol1.edad = 25;
+        pipol1.ciudad = "Medallo pa";
+
+        pipol1.Presentarse();
+    }
+}
+ EJERCICIO CELULAR
+{
+    static void Main(string[] args)
+    {
+        Celular celular1 = new Celular();
+        celular1.marca = "iPhone";
+        celular1.modelo = "Xs";
+
+        celular1.Llamar();
+    }
+}
+ EJERCICIO CANCION
+{
+    static void Main(string[] args)
+    {
+        Cancion cancion1 = new Cancion();
+        cancion1.titulo = "FANTASMA | AVC";
+        cancion1.artista = "Tainy";
+
+        Cancion cancion2 = new Cancion();
+        cancion2.titulo = "La Suerte Está Echada";
+        cancion2.artista = "Diomedes Díaz el Cacique de la Junta";
+
+        cancion1.Reproducir();
+        cancion2.Reproducir();
+    }
+}
+*EJERCICIO MASCOTA
+{
+    static void Main(string[] args)
+    {
+        Mascota mascota1 = new Mascota();
+        mascota1.nombre = "Teddy";
+        mascota1.tipo = "Perro";
+
+        Mascota mascota2 = new Mascota();
+        mascota2.nombre = "Oliver";
+        mascota2.tipo = "Cangrejo";
+
+        mascota1.Presentarse();
+        mascota2.Presentarse();
+    }
+}
+EJERCICIO CARRO
+{
+   static void Main(string[] args)
+    {
+        Carro carro1 = new Carro();
+        carro1.marca = "Renault";
+        carro1.modelo = "9";
+
+        Carro carro2 = new Carro();
+        carro2.marca = "Toyota";
+        carro2.modelo = "TXL";
+
+        carro1.Arrancar();
+        carro2.Arrancar();
+    }
+}
+EJERCICIO LIBRO
 { 
     static void Main(string[] args)
     {
